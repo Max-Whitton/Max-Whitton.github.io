@@ -1,20 +1,258 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Your Name</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Whitton | PhD Student</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+            --section-bg: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--section-bg);
+            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        section {
+            background: var(--section-bg);
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .item {
+            margin-bottom: 25px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #2c3e50;
+        }
+
+        .item-subtitle {
+            font-style: italic;
+            color: #555;
+        }
+
+        .item-date {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        .publication {
+            margin-bottom: 15px;
+        }
+
+        .pub-title {
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .item-header {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Your Name</h1>
-  <p>PhD student / Researcher in [Your Field]</p>
 
-  <h2>Research</h2>
-  <ul>
-    <li>Paper 1</li>
-    <li>Paper 2</li>
-  </ul>
+    <header>
+        <h1>Max Whitton</h1>
+        <div class="subtitle">PhD Student in Computer Science at Boston University</div>
+        <div class="contact-info">
+            <a href="mailto:maxwh@bu.edu">maxwh@bu.edu</a> |
+            <span>(716) 200-3152</span>
+            </div>
+    </header>
 
-  <h2>Contact</h2>
-  <p>Email: your.email@example.com</p>
+    <div class="container">
+
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Boston University</span>
+                    <span class="item-date">September 2025 - Present</span>
+                </div>
+                <div class="item-subtitle">Ph.D. in Computer Science</div>
+                <ul>
+                    <li><strong>Awards:</strong> Dean's Fellowship</li>
+                    <li><strong>Advisor:</strong> Professor Boqing Gong</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Cornell University</span>
+                    <span class="item-date">August 2021 - May 2025</span>
+                </div>
+                <div class="item-subtitle">Bachelor of Science in Computer Science</div>
+                <ul>
+                    <li><strong>Honors:</strong> magna cum laude</li>
+                    <li><strong>GPA:</strong> 3.85</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="publication">
+                <div class="pub-title">Baby-VLM-V2: Toward Developmentally Grounded Pretraining and Benchmarking of Vision Foundation Models</div>
+                <div>Wang, S., Wang, W., Wang, Z., <strong>Whitton, M.</strong>, et al., Gong, B.</div>
+                <div><em>Under Review for CVPR 2026</em> (2026)</div>
+            </div>
+
+            <div class="publication">
+                <div class="pub-title">WILDFIN: An In-the-Wild Video Dataset from Underwater Ecology Pipelines</div>
+                <div>Grassick, A., Hsu, J., Lin, E., <strong>Whitton, M.</strong>, et al., Sun, J.</div>
+                <div><em>Under Review for CVPR 2026</em> (2026)</div>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research Experience</h2>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Gong Research Group (Boston University)</span>
+                    <span class="item-date">September 2025 - Present</span>
+                </div>
+                <div class="item-subtitle">Graduate Researcher</div>
+                <ul>
+                    <li>Conducting graduate-level research on machine learning, with a focus on deep learning and visual representation learning.</li>
+                    <li>Investigating transformer-based vision language models for tasks such as image QA and multimodal understanding.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Collaborative Discovery Group (Cornell University)</span>
+                    <span class="item-date">January 2025 - May 2025</span>
+                </div>
+                <div class="item-subtitle">Undergraduate Researcher</div>
+                <ul>
+                    <li>Participated in a collaboration between Professor Jennifer Sun and Cornell University's Hein Fish Lab.</li>
+                    <li>Prepared an expert-annotated animal behavior detection dataset and provided benchmark results from SOTA vision models.</li>
+                    <li>Contributions included in a manuscript submitted to CVPR 2026.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Social Dynamics Lab (Cornell University)</span>
+                    <span class="item-date">January 2025 - May 2025</span>
+                </div>
+                <div class="item-subtitle">Undergraduate Researcher</div>
+                <ul>
+                    <li>Assisted in a collaboration between Professor Lillian Lee and Cornell University's sociology department.</li>
+                    <li>Built a series of LLM-powered confirmation bias simulations and interpreted the findings.</li>
+                    <li>Studied and deployed knowledge graphs to support information indexing, retrieval, and reasoning.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="industry">
+            <h2>Industry Experience</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Moog, Inc</span>
+                    <span class="item-date">May 2024 - January 2025</span>
+                </div>
+                <div class="item-subtitle">AI Development Team Member | Buffalo, NY</div>
+                <ul>
+                    <li>Developed and scaled an application to automate in-context AI translation of .docx and .pptx files.</li>
+                    <li>Researched, developed, and deployed an application to validate database entries using generative AI.</li>
+                    <li>Worked on a small development team to deploy internal applications used by thousands of users at a global engineering firm.</li>
+                    <li>Started as a summer intern and accepted a return offer to work part-time during the academic year.</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Max Whitton. Last updated: January 2026.</p>
+    </footer>
+
 </body>
 </html>
