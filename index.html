@@ -134,7 +134,7 @@ header {
     display: block;
 }
 
-/* ===== OTHER SECTIONS ===== */
+/* ===== PUBLICATIONS ===== */
 .publication {
     margin-bottom: 18px;
 }
@@ -150,6 +150,7 @@ header {
     margin-right: 10px;
 }
 
+/* ===== EDUCATION ===== */
 .edu-item {
     display: flex;
     gap: 20px;
@@ -172,6 +173,7 @@ header {
     font-size: 1.05rem;
 }
 
+/* ===== EXPERIENCE ===== */
 .item {
     margin-bottom: 25px;
 }
@@ -212,7 +214,7 @@ footer {
 <!-- TABS -->
 <nav class="tabs">
     <button class="tab-button active" onclick="showTab('home')">Home</button>
-    <button class="tab-button" onclick="showTab('projects')">Projects</button>
+    <button class="tab-button" onclick="showTab('touch')">Making Sense of Touch</button>
 </nav>
 
 <header>
@@ -229,9 +231,10 @@ footer {
     </div>
 </header>
 
-<!-- HOME TAB -->
+<!-- HOME TAB (UNCHANGED CONTENT) -->
 <div id="home" class="tab-content active container">
 
+<!-- News -->
 <section id="news">
 <h2>Recent Updates</h2>
 <p>
@@ -239,32 +242,38 @@ Our paper was recently accepted to <a href="https://cvpr.thecvf.com">CVPR 2026!<
 </p>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
 <h2>About</h2>
 <p>
-I’m a Ph.D. student in Computer Science at Boston University, where I research deep learning and vision–language models with a focus on data and pretraining.
+I’m a Ph.D. student in Computer Science at Boston University, where I research deep learning and vision–language models with a focus on data and pretraining. Last May, I graduated from Cornell University with a degree in Computer Science, and I interned on the AI Development team at <a href="https://www.moog.com">Moog, Inc.</a> I enjoy working at the intersection of research and real-world impact, from multimodal AI systems to large-scale data and model deployment.
 </p>
 </section>
 
+<!-- PUBLICATIONS -->
 <section id="publications">
 <h2>Publications</h2>
 
 <div class="publication">
     <div class="pub-title">
-        Baby-VLM-V2: Toward Developmentally Grounded Pretraining
+        Baby-VLM-V2: Toward Developmentally Grounded Pretraining and Benchmarking of Vision Foundation Models
+    </div>
+    <div>
+        Shengao Wang*, Wenqi Wang*, Zecheng Wang*, <b>Max Whitton*,</b> ...
     </div>
     <div><em>CVPR 2026</em></div>
 </div>
 
 </section>
 
+<!-- EDUCATION -->
 <section id="education">
 <h2>Education</h2>
 
 <div class="edu-item">
     <img src="images/bu_logo.png" class="edu-logo">
     <div class="edu-details">
-        <div class="edu-title">Boston University — Ph.D.</div>
+        <div class="edu-title">Boston University — Ph.D. in Computer Science</div>
     </div>
 </div>
 
@@ -272,26 +281,25 @@ I’m a Ph.D. student in Computer Science at Boston University, where I research
 
 </div>
 
-<!-- PROJECTS TAB -->
-<div id="projects" class="tab-content container">
+<!-- NEW TAB -->
+<div id="touch" class="tab-content container">
 <section>
-<h2>Projects</h2>
+<h2>Making Sense of Touch</h2>
 
-<div class="item">
-    <div class="item-title">Multimodal Dataset Pipeline</div>
-    <ul>
-        <li>Scalable dataset curation</li>
-        <li>Filtering and annotation pipeline</li>
-    </ul>
-</div>
+<p>
+This section can showcase your work related to tactile perception, multimodal learning, or any project tied to “Making Sense of Touch.”
+</p>
 
-<div class="item">
-    <div class="item-title">LLM Evaluation Toolkit</div>
-    <ul>
-        <li>Benchmarking system for LLMs</li>
-        <li>Reproducible evaluation workflows</li>
-    </ul>
-</div>
+<p>
+You could include:
+</p>
+
+<ul>
+<li>Research overview</li>
+<li>Datasets or benchmarks</li>
+<li>Publications or preprints</li>
+<li>Videos or demos</li>
+</ul>
 
 </section>
 </div>
