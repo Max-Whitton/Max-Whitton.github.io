@@ -66,7 +66,6 @@ header {
     object-fit: cover;
 }
 
-
 .header-text h1 {
     margin: 0;
     font-size: 2.4rem;
@@ -100,7 +99,42 @@ header {
     font-size: 0.95rem;
 }
 
-/* ===== PUBLICATIONS ===== */
+/* ===== TABS ===== */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background: var(--card);
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.tab-button.active {
+    background: var(--accent);
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* ===== OTHER SECTIONS ===== */
 .publication {
     margin-bottom: 18px;
 }
@@ -116,7 +150,6 @@ header {
     margin-right: 10px;
 }
 
-/* ===== EDUCATION ===== */
 .edu-item {
     display: flex;
     gap: 20px;
@@ -139,7 +172,6 @@ header {
     font-size: 1.05rem;
 }
 
-/* ===== EXPERIENCE ===== */
 .item {
     margin-bottom: 25px;
 }
@@ -177,6 +209,12 @@ footer {
 
 <body>
 
+<!-- TABS -->
+<nav class="tabs">
+    <button class="tab-button active" onclick="showTab('home')">Home</button>
+    <button class="tab-button" onclick="showTab('projects')">Projects</button>
+</nav>
+
 <header>
     <div class="header-content">
         <img src="images/IMG_6787.jpg" alt="image not found" class="profile-pic">
@@ -191,75 +229,87 @@ footer {
     </div>
 </header>
 
-<div class="container">
+<!-- HOME TAB -->
+<div id="home" class="tab-content active container">
 
-<!-- News -->
 <section id="news">
 <h2>Recent Updates</h2>
 <p>
 Our paper was recently accepted to <a href="https://cvpr.thecvf.com">CVPR 2026!</a>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-<h2>About</h2>
-<p>
-I’m a Ph.D. student in Computer Science at Boston University, where I research deep learning and vision–language models with a focus on data and pretraining. Last May, I graduated from Cornell University with a degree in Computer Science, and I interned on the AI Development team at <a href="https://www.moog.com">Moog, Inc.</a> I enjoy working at the intersection of research and real-world impact, from multimodal AI systems to large-scale data and model deployment.
 </p>
 </section>
 
-    
-<!-- PUBLICATIONS -->
+<section id="about">
+<h2>About</h2>
+<p>
+I’m a Ph.D. student in Computer Science at Boston University, where I research deep learning and vision–language models with a focus on data and pretraining.
+</p>
+</section>
+
 <section id="publications">
 <h2>Publications</h2>
 
 <div class="publication">
     <div class="pub-title">
-        Baby-VLM-V2: Toward Developmentally Grounded Pretraining and Benchmarking of Vision Foundation Models
-    </div>
-    <div>
-        Shengao Wang*, Wenqi Wang*, Zecheng Wang*, <b>Max Whitton*,</b> Michael Wakeham, Arjun Chandra, Joey Huang, Pengyue Zhu, Helen Chen, David Li, Jeffrey Li, Shawn Li, Andrew Zagula, Amy Zhao, Andrew Zhu, Sayaka Nakamura, Yuki Yamamoto, Jerry Jun Yokono, Aaron Mueller, Bryan A. Plummer, Kate Saenko, Venkatesh Saligrama, Boqing Gong
+        Baby-VLM-V2: Toward Developmentally Grounded Pretraining
     </div>
     <div><em>CVPR 2026</em></div>
-    
-    <div class="pub-links">
-        <a href="#" target="https://arxiv.org/abs/2512.10932">Paper</a>
-    </div>
 </div>
 
-<!-- <div class="publication">
-    <div class="pub-title">
-        WildFin: An In-the-Wild Video Dataset for Fish Behavioral Recognition
-    </div>
-    <div>
-        Abigail Grassick, Jerome Tze-Hou Hsu, Ethan Lin, Ziang Liu, <b>Max Whitton,</b> Madelyn Hair, Liam Gutierrez, Haozheng Yu, Kristin Branson, Vivek Jayaraman, Michael A. Gil, Andrew M. Hein, Jennifer J. Sun
-    </div>
-    <div><em>Under Review for ECCV 2026</em></div>
-</div> -->
 </section>
 
-<!-- EDUCATION -->
 <section id="education">
 <h2>Education</h2>
 
 <div class="edu-item">
-    <img src="images/bu_logo.png" class="edu-logo" alt="Boston University">
+    <img src="images/bu_logo.png" class="edu-logo">
     <div class="edu-details">
-        <div class="edu-title">Boston University — Ph.D. in Computer Science</div>
-        <div>September 2025 – Present</div>
-        <div>Dean’s Fellowship · Advisor: Boqing Gong</div>
+        <div class="edu-title">Boston University — Ph.D.</div>
     </div>
 </div>
 
-<div class="edu-item">
-    <img src="images/cornell_logo.png" class="edu-logo" alt="Cornell University">
-    <div class="edu-details">
-        <div class="edu-title">Cornell University — B.S. in Computer Science</div>
-        <div>August 2021 – May 2025</div>
-        <div>magna cum laude · GPA: 3.85</div>
-    </div>
-</div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
+</div>
+
+<!-- PROJECTS TAB -->
+<div id="projects" class="tab-content container">
+<section>
+<h2>Projects</h2>
+
+<div class="item">
+    <div class="item-title">Multimodal Dataset Pipeline</div>
+    <ul>
+        <li>Scalable dataset curation</li>
+        <li>Filtering and annotation pipeline</li>
+    </ul>
+</div>
+
+<div class="item">
+    <div class="item-title">LLM Evaluation Toolkit</div>
+    <ul>
+        <li>Benchmarking system for LLMs</li>
+        <li>Reproducible evaluation workflows</li>
+    </ul>
+</div>
+
+</section>
+</div>
+
+<script>
+function showTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    document.querySelectorAll('.tab-button').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    document.getElementById(tabId).classList.add('active');
+    event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>
