@@ -136,18 +136,60 @@ header {
 
 /* ===== PUBLICATIONS ===== */
 .publication {
-    margin-bottom: 18px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+}
+
+.publication:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .pub-title {
     font-weight: bold;
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+}
+
+.pub-venue {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 4px 0 10px;
+}
+
+.pub-links {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .pub-links a {
-    color: var(--accent);
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 20px;
     text-decoration: none;
-    font-size: 0.9rem;
-    margin-right: 10px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: opacity 0.15s;
+}
+
+.pub-links a:hover {
+    opacity: 0.82;
+}
+
+.pub-links a.btn-primary {
+    background: var(--accent);
+    color: #fff;
+}
+
+.pub-links a.btn-secondary {
+    background: #e8f4fd;
+    color: var(--accent);
+    border: 1px solid var(--accent);
 }
 
 /* ===== EDUCATION ===== */
@@ -261,11 +303,10 @@ I’m a Ph.D. student in Computer Science at Boston University, where I research
     <div>
         Shengao Wang*, Wenqi Wang*, Zecheng Wang*, <b>Max Whitton*,</b> Michael Wakeham, Arjun Chandra, Joey Huang, Pengyue Zhu, Helen Chen, David Li, Jeffrey Li, Shawn Li, Andrew Zagula, Amy Zhao, Andrew Zhu, Sayaka Nakamura, Yuki Yamamoto, Jerry Jun Yokono, Aaron Mueller, Bryan A. Plummer, Kate Saenko, Venkatesh Saligrama, Boqing Gong
     </div>
-    <div><em>CVPR 2026</em></div>
-    
+    <div class="pub-venue">CVPR 2026</div>
     <div class="pub-links">
-        <a href="https://shawnking98.github.io/BabyVLM-v2/" target="_blank" style="font-size: 1rem; font-weight: 600;">Project Page</a>
-        <a href="https://arxiv.org/abs/2512.10932" target="_blank">Paper</a>
+        <a href="https://shawnking98.github.io/BabyVLM-v2/" target="_blank" class="btn-primary">Project Page</a>
+        <a href="https://arxiv.org/abs/2512.10932" target="_blank" class="btn-secondary">Paper</a>
     </div>
 </div>
 
@@ -276,10 +317,10 @@ I’m a Ph.D. student in Computer Science at Boston University, where I research
     <div>
         <b>Max Whitton,</b> Zecheng Wang, Puchen Liu, Quang Tuan Truong, Shengao Wang, Manaswi Yadamreddy, Oktay Ozel, Visista Jayanti, Saniya Sekhon, Hanna Samuel Tadesse, Lawrence Miao, Junjie Wang, Jiasen Lu, Chen Yu, Boqing Gong
     </div>
-    <div><em>arXiv 2025</em></div>
+    <div class="pub-venue">arXiv 2025</div>
     <div class="pub-links">
-        <a href="https://max-whitton.github.io/Contrastive_Learning_From_Touch/" target="_blank" style="font-size: 1rem; font-weight: 600;">Project Page</a>
-        <a href="https://arxiv.org/abs/2606.31943" target="_blank">Paper</a>
+        <a href="https://max-whitton.github.io/Contrastive_Learning_From_Touch/" target="_blank" class="btn-primary">Project Page</a>
+        <a href="https://arxiv.org/abs/2606.31943" target="_blank" class="btn-secondary">Paper</a>
     </div>
 </div>
 
