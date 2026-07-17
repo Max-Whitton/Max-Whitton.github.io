@@ -4,9 +4,206 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Making Sense of Touch from the Child's View for Contrastive Learning</title>
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --accent: #3498db;
+      --text: #333;
+      --bg: #f9f9f9;
+      --card: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* ===== TITLE ===== */
+    .paper-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .venue-badge {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .venue-badge span {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 4px 18px;
+      border-radius: 20px;
+    }
+
+    /* ===== AUTHORS ===== */
+    .authors {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      line-height: 2;
+    }
+
+    .authors a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .authors sup {
+      font-size: 0.7em;
+      color: #555;
+    }
+
+    /* ===== AFFILIATIONS ===== */
+    .affiliations {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 24px;
+    }
+
+    .affiliations sup {
+      font-size: 0.75em;
+    }
+
+    /* ===== LOGOS ===== */
+    .logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .logo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .logo-item img, .logo-item svg {
+      height: 50px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .logo-item span {
+      font-size: 0.8rem;
+      color: #666;
+      font-weight: 500;
+    }
+
+    /* ===== LINKS ===== */
+    .paper-links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .paper-links a {
+      display: inline-block;
+      padding: 8px 22px;
+      border-radius: 24px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: opacity 0.15s;
+    }
+
+    .paper-links a:hover { opacity: 0.82; }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: #e8f4fd;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 0 0 36px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Making Sense of Touch from the Child's View for Contrastive Learning</h1>
-  <p>Your content goes here.</p>
+<div class="container">
+
+  <h1 class="paper-title">Making Sense of Touch from the Child's View for Contrastive Learning</h1>
+
+  <div class="venue-badge"><span>ICDL 2026</span></div>
+
+  <div class="authors">
+    Max Whitton<sup>*1</sup>,&ensp;
+    Zecheng Wang<sup>*1</sup>,&ensp;
+    Puchen Liu<sup>1</sup>,&ensp;
+    Quang Tuan Truong<sup>1</sup>,&ensp;
+    Shengao Wang<sup>1</sup>,&ensp;
+    Manaswi Yadamreddy<sup>1</sup>,&ensp;
+    Oktay Ozel<sup>1</sup>,&ensp;
+    Visista Jayanti<sup>1</sup>,&ensp;
+    Saniya Sekhon<sup>1</sup>,&ensp;
+    Hanna Samuel Tadesse<sup>1</sup>,&ensp;
+    Lawrence Miao<sup>1</sup>,&ensp;
+    Junjie Wang<sup>1</sup>,&ensp;
+    Jiasen Lu<sup>2</sup>,&ensp;
+    Chen Yu<sup>3</sup>,&ensp;
+    Boqing Gong<sup>1</sup>
+  </div>
+
+  <div class="affiliations">
+    <sup>1</sup>&nbsp;Boston University &ensp;|&ensp;
+    <sup>2</sup>&nbsp;Apple &ensp;|&ensp;
+    <sup>3</sup>&nbsp;The University of Texas at Austin
+    <br><sup>*</sup>&nbsp;Equal contribution
+  </div>
+
+  <div class="logos">
+    <div class="logo-item">
+      <img src="images/bu_logo.png" alt="Boston University">
+    </div>
+    <div class="logo-item">
+      <img src="images/apple_logo.svg" alt="Apple">
+    </div>
+    <div class="logo-item">
+      <img src="images/utaustin_logo.svg" alt="UT Austin">
+    </div>
+  </div>
+
+  <div class="paper-links">
+    <a href="https://arxiv.org/abs/2606.31943" target="_blank" class="btn-primary">Paper</a>
+    <a href="https://github.com/Max-Whitton/Contrastive-learning-from--vision-text-cluster-triplets" target="_blank" class="btn-secondary">Code</a>
+    <a class="btn-secondary" style="opacity:0.5; cursor:default;" title="Coming soon">Data (TODO)</a>
+    <a class="btn-secondary" style="opacity:0.5; cursor:default;" title="Coming soon">Model (TODO)</a>
+  </div>
+
+  <hr>
+
+</div>
 </body>
 </html>
