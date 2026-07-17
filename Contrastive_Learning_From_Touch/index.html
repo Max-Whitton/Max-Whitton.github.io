@@ -149,6 +149,52 @@
       border-top: 1px solid #e0e0e0;
       margin: 0 0 36px;
     }
+
+    /* ===== CONTENT SECTIONS ===== */
+    .content-section {
+      background: var(--card);
+      padding: 30px;
+      margin-bottom: 24px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .content-section h2 {
+      margin-top: 0;
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 8px;
+      font-size: 1.3rem;
+    }
+
+    .content-section p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    figure {
+      margin: 20px 0 0;
+    }
+
+    figure + figure {
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid #eee;
+    }
+
+    figure img {
+      width: 100%;
+      border-radius: 6px;
+      display: block;
+    }
+
+    figcaption {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
@@ -203,6 +249,61 @@
   </div>
 
   <hr>
+
+  <!-- ABSTRACT -->
+  <section class="content-section">
+    <h2>Abstract</h2>
+    <p>Is the sense of touch a mechanism for human babies' learning of visual concepts? If so, can we quantify its importance, and to what extent do babies rely on their sense of touch for visual learning? To approach these questions in a principled way, we propose a structured coding system for baby-centric touch events, yielding a dataset of 264k two-second clips of touch events coded according to this system. Using this dataset, we pretrain developmentally grounded models that reveal promising insights into the nature of baby learning from touch.</p>
+  </section>
+
+  <!-- FIGURES -->
+  <section class="content-section">
+    <h2>Overview</h2>
+    <figure>
+      <img src="images/teaser.png" alt="Teaser figure">
+      <figcaption>A baby processes touch sensations, spoken language, and visual input. If we change one of these variables and measure the baby's visual understanding, we can gain insight into the nature of that stimulus.</figcaption>
+    </figure>
+  </section>
+
+  <section class="content-section">
+    <h2>Data Pipeline</h2>
+    <figure>
+      <img src="images/data-pipeline.png" alt="Data pipeline">
+      <figcaption>Three-stage pipeline to code a large-scale dataset of baby-centric touch events.</figcaption>
+    </figure>
+  </section>
+
+  <section class="content-section">
+    <h2>Dataset Statistics</h2>
+    <figure>
+      <img src="images/piecharts.png" alt="Touch annotation distributions">
+      <figcaption>Distributions of the coded touch [verb, noun, body part, additional conditions] over our touch annotations.</figcaption>
+    </figure>
+  </section>
+
+  <section class="content-section">
+    <h2>Models &amp; Evaluation</h2>
+    <figure>
+      <img src="images/athroughd.png" alt="Computational models">
+      <figcaption><strong>A)</strong> Examples of [frame, speech transcript, touch ID] triplets (top) and data pairs missing either speech or touch (bottom). <strong>B)</strong> Visualization of model architecture and contrastive learning. <strong>C)</strong> Labeled-S test sample. <strong>D)</strong> PV test sample.</figcaption>
+    </figure>
+  </section>
+
+  <section class="content-section">
+    <h2>Results</h2>
+    <figure>
+      <img src="images/lsplots.png" alt="Labeled-S results">
+      <figcaption>Labeled-S evaluation of the baseline pretraining dataset (red) vs. touch-enhanced pretraining dataset (blue), for both linear probing (top) and zero-shot (bottom).</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Picture_Vocabulary_line_plot.png" alt="Picture Vocabulary results">
+      <figcaption>Linear-probing accuracy on Picture Vocabulary as a result of the baseline pretraining dataset (red) vs. touch-enhanced pretraining dataset (blue).</figcaption>
+    </figure>
+    <figure>
+      <img src="images/attention_maps.png" alt="Attention maps">
+      <figcaption>Representative pretraining examples (left), and corresponding attention maps of our model (middle) and a baseline model (right).</figcaption>
+    </figure>
+  </section>
 
 </div>
 </body>
