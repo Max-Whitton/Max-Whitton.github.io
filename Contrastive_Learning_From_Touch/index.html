@@ -195,6 +195,26 @@
       color: #555;
       line-height: 1.5;
     }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .two-col figure {
+      margin: 0;
+    }
+
+    .two-col figure + figure {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    @media (max-width: 600px) {
+      .two-col { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -256,15 +276,7 @@
     <p>Is the sense of touch a mechanism for human babies' learning of visual concepts? If so, can we quantify its importance, and to what extent do babies rely on their sense of touch for visual learning? To approach these questions in a principled way, we propose a structured coding system for baby-centric touch events, yielding a dataset of 264k two-second clips of touch events coded according to this system. Using this dataset, we pretrain developmentally grounded models that reveal promising insights into the nature of baby learning from touch.</p>
   </section>
 
-  <!-- FIGURES -->
-  <section class="content-section">
-    <h2>Overview</h2>
-    <figure>
-      <img src="images/teaser.png" alt="Teaser figure">
-      <figcaption>A baby processes touch sensations, spoken language, and visual input. If we change one of these variables and measure the baby's visual understanding, we can gain insight into the nature of that stimulus.</figcaption>
-    </figure>
-  </section>
-
+  <!-- DATA PIPELINE -->
   <section class="content-section">
     <h2>Data Pipeline</h2>
     <figure>
@@ -281,24 +293,57 @@
     </figure>
   </section>
 
+  <!-- DATA EXAMPLES -->
   <section class="content-section">
-    <h2>Models &amp; Evaluation</h2>
+    <h2>Data Examples</h2>
     <figure>
-      <img src="images/athroughd.png" alt="Computational models">
-      <figcaption><strong>A)</strong> Examples of [frame, speech transcript, touch ID] triplets (top) and data pairs missing either speech or touch (bottom). <strong>B)</strong> Visualization of model architecture and contrastive learning. <strong>C)</strong> Labeled-S test sample. <strong>D)</strong> PV test sample.</figcaption>
+      <img src="images/fig_A_data_examples.png" alt="Data examples">
+      <figcaption>Examples of [frame, speech transcript, touch ID] triplets (top) and data pairs missing either speech or touch (bottom).</figcaption>
     </figure>
   </section>
 
+  <!-- MODEL ARCHITECTURE -->
   <section class="content-section">
-    <h2>Results</h2>
+    <h2>Model Architecture</h2>
     <figure>
-      <img src="images/lsplots.png" alt="Labeled-S results">
-      <figcaption>Labeled-S evaluation of the baseline pretraining dataset (red) vs. touch-enhanced pretraining dataset (blue), for both linear probing (top) and zero-shot (bottom).</figcaption>
+      <img src="images/fig_B_model_architecture.png" alt="Model architecture" style="max-width:520px; margin: 0 auto; display:block;">
+      <figcaption>Visualization of the contrastive learning setup: vision, touch, and text encoders are trained so that representations of the same scene are pushed together while representations of different scenes are pushed apart.</figcaption>
     </figure>
-    <figure>
-      <img src="images/Picture_Vocabulary_line_plot.png" alt="Picture Vocabulary results">
-      <figcaption>Linear-probing accuracy on Picture Vocabulary as a result of the baseline pretraining dataset (red) vs. touch-enhanced pretraining dataset (blue).</figcaption>
-    </figure>
+  </section>
+
+  <!-- EVALUATION FORMAT -->
+  <section class="content-section">
+    <h2>Evaluation Format</h2>
+    <div class="two-col">
+      <figure>
+        <img src="images/fig_C_eval_labeledsS.png" alt="Labeled-S evaluation format">
+        <figcaption><strong>Labeled-S:</strong> Given a query concept, select the matching frame from a set of candidates.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/fig_D_eval_PV.png" alt="Picture Vocabulary evaluation format">
+        <figcaption><strong>Picture Vocabulary:</strong> Given a spoken word, identify the correct image from four options.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- QUANTITATIVE RESULTS -->
+  <section class="content-section">
+    <h2>Quantitative Results</h2>
+    <div class="two-col">
+      <figure>
+        <img src="images/lsplots.png" alt="Labeled-S results">
+        <figcaption>Labeled-S: linear probing (top) and zero-shot (bottom). Blue = touch-enhanced, red = baseline.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/Picture_Vocabulary_line_plot.png" alt="Picture Vocabulary results">
+        <figcaption>Picture Vocabulary linear-probing accuracy. Blue = touch-enhanced, red = baseline.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- QUALITATIVE RESULTS -->
+  <section class="content-section">
+    <h2>Qualitative Results</h2>
     <figure>
       <img src="images/attention_maps.png" alt="Attention maps">
       <figcaption>Representative pretraining examples (left), and corresponding attention maps of our model (middle) and a baseline model (right).</figcaption>
