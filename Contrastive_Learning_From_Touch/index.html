@@ -190,10 +190,15 @@
     }
 
     figcaption {
-      margin-top: 10px;
+      margin-bottom: 10px;
       font-size: 0.9rem;
       color: #555;
       line-height: 1.5;
+    }
+
+    figure figcaption {
+      margin-top: 6px;
+      margin-bottom: 0;
     }
 
     .two-col {
@@ -279,35 +284,35 @@
   <!-- DATA PIPELINE -->
   <section class="content-section">
     <h2>Data Pipeline</h2>
+    <figcaption>Three-stage pipeline to code a large-scale dataset of baby-centric touch events.</figcaption>
     <figure>
       <img src="images/data-pipeline.png" alt="Data pipeline">
-      <figcaption>Three-stage pipeline to code a large-scale dataset of baby-centric touch events.</figcaption>
     </figure>
   </section>
 
   <section class="content-section">
     <h2>Dataset Statistics</h2>
+    <figcaption>Distributions of the coded touch [verb, noun, body part, additional conditions] over our touch annotations.</figcaption>
     <figure>
       <img src="images/piecharts.png" alt="Touch annotation distributions">
-      <figcaption>Distributions of the coded touch [verb, noun, body part, additional conditions] over our touch annotations.</figcaption>
     </figure>
   </section>
 
   <!-- DATA EXAMPLES -->
   <section class="content-section">
     <h2>Data Examples</h2>
+    <figcaption>Examples of [frame, speech transcript, touch ID] triplets (top) and data pairs missing either speech or touch (bottom).</figcaption>
     <figure>
       <img src="images/fig_A_data_examples.png" alt="Data examples">
-      <figcaption>Examples of [frame, speech transcript, touch ID] triplets (top) and data pairs missing either speech or touch (bottom).</figcaption>
     </figure>
   </section>
 
   <!-- MODEL ARCHITECTURE -->
   <section class="content-section">
     <h2>Model Architecture</h2>
+    <figcaption>Vision, touch, and text encoders are trained so that representations of the same scene are pushed together while representations of different scenes are pushed apart.</figcaption>
     <figure>
-      <img src="images/fig_B_model_architecture.png" alt="Model architecture" style="max-width:520px; margin: 0 auto; display:block;">
-      <figcaption>Visualization of the contrastive learning setup: vision, touch, and text encoders are trained so that representations of the same scene are pushed together while representations of different scenes are pushed apart.</figcaption>
+      <img src="images/fig_B_model_architecture.png" alt="Model architecture" style="max-width:480px; margin: 12px auto 0; display:block;">
     </figure>
   </section>
 
@@ -315,38 +320,36 @@
   <section class="content-section">
     <h2>Evaluation Format</h2>
     <div class="two-col">
-      <figure>
-        <img src="images/fig_C_eval_labeledsS.png" alt="Labeled-S evaluation format">
+      <div>
         <figcaption><strong>Labeled-S:</strong> Given a query concept, select the matching frame from a set of candidates.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/fig_D_eval_PV.png" alt="Picture Vocabulary evaluation format">
+        <figure>
+          <img src="images/fig_C_eval_labeledsS.png" alt="Labeled-S evaluation format">
+        </figure>
+      </div>
+      <div>
         <figcaption><strong>Picture Vocabulary:</strong> Given a spoken word, identify the correct image from four options.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- QUANTITATIVE RESULTS -->
-  <section class="content-section">
-    <h2>Quantitative Results</h2>
-    <div class="two-col">
-      <figure>
-        <img src="images/lsplots.png" alt="Labeled-S results">
-        <figcaption>Labeled-S: linear probing (top) and zero-shot (bottom). Blue = touch-enhanced, red = baseline.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/Picture_Vocabulary_line_plot.png" alt="Picture Vocabulary results">
-        <figcaption>Picture Vocabulary linear-probing accuracy. Blue = touch-enhanced, red = baseline.</figcaption>
-      </figure>
+        <figure>
+          <img src="images/fig_D_eval_PV.png" alt="Picture Vocabulary evaluation format">
+        </figure>
+      </div>
     </div>
   </section>
 
   <!-- QUALITATIVE RESULTS -->
   <section class="content-section">
     <h2>Qualitative Results</h2>
+    <figcaption>Representative pretraining examples (left), and corresponding attention maps of our model (middle) and a baseline model (right).</figcaption>
     <figure>
       <img src="images/attention_maps.png" alt="Attention maps">
-      <figcaption>Representative pretraining examples (left), and corresponding attention maps of our model (middle) and a baseline model (right).</figcaption>
+    </figure>
+  </section>
+
+  <!-- QUANTITATIVE RESULTS -->
+  <section class="content-section">
+    <h2>Quantitative Results</h2>
+    <figcaption>Linear probe and zero-shot accuracy across three tasks. Blue = touch-enhanced pretraining, red = baseline.</figcaption>
+    <figure>
+      <img src="images/allplots.png" alt="All quantitative results">
     </figure>
   </section>
 
